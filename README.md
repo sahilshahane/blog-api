@@ -36,9 +36,6 @@ body -
 Response Header - 
 Authorization Bearer <token>
 
-Response -
-publicURL for the post
-
 url -
 /api/v1/login
 ```
@@ -55,6 +52,9 @@ body -
 Request Header - 
 Authorization Bearer <token>
 
+Response -
+publicURL for the post
+
 url -
 /api/v1/create-post
 ```
@@ -62,7 +62,7 @@ url -
 ### View Post | GET
 ```
 url -
-/api/v1/post/:postURL
+/api/v1/post/:publicURL
 ```
 
 
