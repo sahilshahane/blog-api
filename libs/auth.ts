@@ -23,6 +23,7 @@ if (!JWT_SECRET) throw new Error("Please add JWT_SECRET in your .env file");
 export const signJWT = (payload: TJWTPayload) => {
   return jwt.sign(payload, JWT_SECRET, {
     algorithm: JWT_ALGORITHM,
+    expiresIn: "10d",
   });
 };
 

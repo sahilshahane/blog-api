@@ -31,6 +31,7 @@ export const AuthenticateHandler = (
 
     if (!decodedJWT) throw NOT_AUTHORIZED_ERROR;
 
+    // @ts-expect-error
     req.user = decodedJWT["user"];
 
     next();

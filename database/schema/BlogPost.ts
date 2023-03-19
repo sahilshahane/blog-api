@@ -4,7 +4,6 @@ UserSchema;
 export const BlogPostSchema = new Schema({
   title: {
     required: true,
-    unique: true,
     type: SchemaTypes.String,
   },
   content: {
@@ -13,7 +12,7 @@ export const BlogPostSchema = new Schema({
   },
   author: {
     required: true,
-    ref: "User",
+    ref: "user",
     type: SchemaTypes.ObjectId,
   },
   publicURL: {
@@ -23,4 +22,4 @@ export const BlogPostSchema = new Schema({
   },
 });
 
-export const BlogPost = model("BlogPost", BlogPostSchema);
+export const BlogPost = model("blogpost", BlogPostSchema);

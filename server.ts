@@ -5,6 +5,7 @@ import { APIErrorHandler } from "@/middleware/APIErrorHandler";
 import { dbConnect } from "@/database/connect";
 import { morganMiddleware } from "@/middleware/morganHandler";
 import { logger } from "@/libs/logger";
+import cors from "cors";
 
 logger.info(`NODE_ENV = ${process.env.NODE_ENV}`);
 
@@ -14,6 +15,7 @@ if (!PORT) throw new Error("Please add PORT in your .env config");
 
 const app = express();
 
+app.use(cors());
 app.use(morganMiddleware);
 
 app.use(
