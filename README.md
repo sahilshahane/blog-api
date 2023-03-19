@@ -36,6 +36,9 @@ body -
 Response Header - 
 Authorization Bearer <token>
 
+Response -
+publicURL for the post
+
 url -
 /api/v1/login
 ```
