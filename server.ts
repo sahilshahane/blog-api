@@ -28,6 +28,10 @@ app.use("/api/v1", APIv1Route);
 
 app.use(APIErrorHandler);
 
+app.get("/", (req, res) => {
+  res.send("Server is running, send requests to /api/v1/ path");
+});
+
 dbConnect()
   .then(() => logger.info("Connected to MongoDB"))
   .then(() =>
